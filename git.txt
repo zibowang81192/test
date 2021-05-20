@@ -1,0 +1,22 @@
+git init
+git add .
+git commit -m "注释”
+git remote add origin +网址
+git pull origin main
+
+
+git fetch origin main
+git log main origin/main
+# git diff <local branch> <remote>/<remote branch>
+git diff --stat main origin/main
+
+###########
+#使用git fetch#
+###########
+git fetch origin main
+
+git log -p main.. origin/main
+比较本地main分支与远程main分支的区别
+
+git merge origin main
+将本地分支与远程mian分支合并
