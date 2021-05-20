@@ -1,18 +1,19 @@
 git init
 git add .
 git commit -m "注释”
-git remote add origin +网址
-git pull origin main
+git remote add origin +ssh/http
 
+拉取
+#git pull origin main
 
 git fetch origin main
 git log main origin/main
 # git diff <local branch> <remote>/<remote branch>
 git diff --stat main origin/main
 
-###########
+###############
 #使用git fetch#
-###########
+###############
 git fetch origin main
 
 git log -p main.. origin/main
@@ -20,3 +21,20 @@ git log -p main.. origin/main
 
 git merge origin main
 将本地分支与远程mian分支合并
+
+#################
+## 删除本地分支##
+#################
+git branch -d duplication
+
+#################
+## 删除远程分支##
+#################
+
+git push origin --delete duplication
+
+ps: origin 远程
+  duplication分支
+  main 主干
+
+#git push <remote> :<remoteBranchName>
